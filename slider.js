@@ -74,7 +74,7 @@ function removeAllFocusClass(){
 }
 function addFocusClass(ItemNumber){
     removeAllFocusClass();//перед тем, как повесить фокус-класс нужно удалить его у других элементов
-    if(windowWidth>600){
+    if(windowWidth>=1024){
         naviItems[ItemNumber].classList.add('navi-item-focus');
     }
     else{
