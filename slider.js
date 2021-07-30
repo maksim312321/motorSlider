@@ -91,18 +91,18 @@ sliderBtnNext.addEventListener("click", ()=>{//слушаетль событий
     MoveRight();
     clearInterval(intervalId);//остановить автоматические пролистывания
 })
-sliderNavi.addEventListener("click", (event) =>{
+sliderNavi.addEventListener("click", (event) =>{ //слушатель нажатия по навигации
     addFocusClass(event.target.getAttribute("idNavi"));
     MoveTo(event.target.getAttribute("idNavi"));
     clearInterval(intervalId);
 })
 let x1;
 let x2;
-sliderСontainer.addEventListener("touchstart", (event)=>{
+sliderСontainer.addEventListener("touchstart", (event)=>{//слушатель начала свайпа
     x1 = event.touches[0].clientX;//фиксируем начало нажатия
     clearInterval(intervalId);
 })
-sliderСontainer.addEventListener("touchend", (event)=>{
+sliderСontainer.addEventListener("touchend", (event)=>{//слушатель конца свайпа
     x2 = event.changedTouches[0].clientX//фиксируем конец нажатия
     if(x1>x2){MoveRight()}
     else if(x2>x1){MoveLeft()}
