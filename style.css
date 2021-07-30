@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+body{
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+#slider-container{
+    margin-top: 100px;
+    background-color: rgb(245, 250, 255);
+    padding: 50px 0px;
+    position: relative;
+}
+#slider-window{
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+    font-family: Open Sans;
+    font-weight: 400;
+
+    /* display: flex; */
+    overflow: hidden;
+    align-items: center;
+}
+#slider-track{
+    display: flex;
+    transition: 0.5s;
+}
+.slider-item{
+    display: flex;
+    min-width: 1024px;
+}
+.slider-number{
+    margin: 0 30px 0 60px;
+    font-size: 120px;
+    color: rgba(174, 200, 214, 0.575);
+}
+.slider-text{
+    color:rgb(0, 43, 92);
+}
+.slider-title{
+    display: block;
+    margin: 0;
+}
+.slider-list{
+    list-style-type:none
+}
+.slider-list-item{
+    padding: 10px;
+}
+.slider-list-item::before{
+    content: '';
+    display: block;
+    position: absolute;
+    margin-left: -25px;
+    background-image: url(https://perm.teploprofi.com/www/skin/castomize_list_item.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+
+#slider-button-prev, #slider-button-next{
+    position: absolute;
+    cursor: pointer;
+    background-image: url(https://perm.teploprofi.com/www/skin/arrow_right__626c84.svg);
+    width: 21px;
+    height: 60px;
+    top: 50%;
+    margin-top: -30px;
+    
+}
+#slider-button-prev{
+    left:20px;
+    transform: scale(-1);
+}
+#slider-button-next{
+    right: 20px;
+}
+.slider-navi-wrapper{
+    width: 100%;
+    height: 45px;
+    background-color: #00547d;
+    position: absolute;
+    bottom: 0;
+}
+#slider-navi{
+    display: flex;
+    width: 1024px;
+    margin: 0 auto;
+}
+.navi-item{
+    font-family: Open Sans;
+    font-weight: 500;
+    color:white;
+    cursor: pointer;
+    transition: 0.1s;
+    padding-top: 8px;
+    height: 33px;
+    width: 100%;
+    text-align: center;
+}
+.navi-item-focus{
+    font-weight: 600;
+    border-radius: 0 0 3px 3px;
+    background-color: rgb(245, 250, 255);
+    color:black;
+}
+@media (max-width: 1024px) {
+    img, .slider-navi-wrapper{
+        display: none;
+    }
+    #slider-window{
+        width: 768px;
+    }
+    .slider-item{
+        min-width: 768px;
+    }
+    #slider-button-prev{
+        left:40px;
+        transform: scale(-1);
+    }
+    #slider-button-next{
+        right: 40px;
+    }
+    .slider-title{
+        font-size: 18px;
+    }
+    .slider-list-item{
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    img, .slider-number, .slider-navi-wrapper{
+        display: none;
+    }
+    #slider-window{
+        width: 500px;
+    }
+    .slider-item{
+        min-width: 500px;
+    }
+    #slider-button-prev{
+        left:40px;
+        transform: scale(-1);
+    }
+    #slider-button-next{
+        right: 40px;
+    }
+    .slider-title{
+        font-size: 17px;
+        padding-left: 20px;
+    }
+    .slider-list-item{
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    img, .slider-number, .slider-navi-wrapper, .slider-buttons{
+        display: none;
+    }
+    #slider-window{
+        width: 500px;
+    }
+    .slider-item{
+        min-width: 500px;
+    }
+    #slider-button-prev{
+        left:40px;
+        transform: scale(-1);
+    }
+    #slider-button-next{
+        right: 40px;
+    }
+    .slider-title{
+        font-size: 17px;
+        padding-left: 20px;
+    }
+    .slider-list-item{
+        font-size: 12px;
+    }
+
+
+}
+@media (max-width: 500px) {
+    img, .slider-number, .slider-navi-wrapper, .slider-buttons{
+        display: none;
+    }
+    #slider-window{
+        width: 320px;
+    }
+    .slider-item{
+        min-width: 320px;
+    }
+    #slider-button-prev{
+        left:40px;
+        transform: scale(-1);
+    }
+    #slider-button-next{
+        right: 40px;
+    }
+    .slider-title{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .slider-list-item{
+        font-size: 10px;
+    }
+
+
+}
